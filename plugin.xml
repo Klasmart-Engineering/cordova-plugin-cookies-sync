@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-cookies-sync" version="0.1.0">
+    <name>Cookie Sync</name>
+    <description>Cordova Cookie Sync Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,cookie,cookie sync, cookie sync manager</keywords>
+    <js-module src="www/cookies-sync.js" name="cookiesSync">
+        <clobbers target="cookiesSync" />
+    </js-module>
+    <platform name="android">
+        <source-file src="src/android/CookiesSync.java" target-dir="src/com/kidsloop/cookiessync/" />
+        <config-file target="config.xml" parent="/*">
+            <feature name="CookiesSync">
+                <param name="android-package" value="com.kidsloop.cordova.plugin.CookiesSync" />
+            </feature>
+        </config-file>
+    </platform>
+</plugin>

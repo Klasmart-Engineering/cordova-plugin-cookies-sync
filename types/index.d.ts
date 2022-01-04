@@ -1,0 +1,3 @@
+interface cookiesSync {
+    sync: void;
+}
